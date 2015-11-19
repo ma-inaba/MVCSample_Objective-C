@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModelLocator.h"
+
+@protocol RankingTableViewDelegate <NSObject>
+
+- (void)didSelectRowWithAppDataEntity:(AppDataEntity *)appDataEntity;
+
+@end
 
 @interface RankingTableView : UITableView
+<
+UITableViewDelegate,
+UITableViewDataSource
+>
+
+@property (nonatomic, assign) id<RankingTableViewDelegate> rankingTableViewDelegate;
 
 @end

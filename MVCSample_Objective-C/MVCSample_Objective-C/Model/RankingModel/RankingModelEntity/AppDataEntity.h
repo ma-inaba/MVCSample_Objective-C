@@ -10,4 +10,7 @@
 
 @interface AppDataEntity : NSObject
 
+@property int appID;
+@property (nonatomic, strong) NSString *appTitle;
+
 @end

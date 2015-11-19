@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RankingTableView.h"
 
 @interface RankingViewController : UIViewController
+<
+RankingTableViewDelegate
+>
 
 @end

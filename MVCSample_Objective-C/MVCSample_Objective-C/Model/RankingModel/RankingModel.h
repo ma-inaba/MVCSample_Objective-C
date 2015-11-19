@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AppDataEntity.h"
 
 @interface RankingModel : NSObject
+
+@property NSMutableArray<AppDataEntity *> *rankingAppDataEntities;
+
+// データを取得してentityにセットする
+- (void)receiveRankingData;
 
 @end

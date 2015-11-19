@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.rankingTableView.rankingTableViewDelegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -29,6 +30,11 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+}
+
+- (void)didSelectRowWithAppDataEntity:(AppDataEntity *)appDataEntity {
+    
+    NSLog(@"選択されました %@",appDataEntity);
 }
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RankingModel.h"
 
 @interface ModelLocator : NSObject
+
++ (ModelLocator *)sharedInstance;
+- (id)init UNAVAILABLE_ATTRIBUTE;
+
+@property RankingModel *rankingModel;
 
 @end

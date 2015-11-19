@@ -10,4 +10,34 @@
 
 @implementation ModelLocator
 
+static ModelLocator *_instance;
+
+#pragma mark - Initializer
++ (void)initialize {
+    
+    @synchronized(self) {
+        if (_instance == nil) {
+            _instance = [[ModelLocator alloc] initInternal];
+        }
+    }
+}
+
++ (ModelLocator *)sharedInstance {
+    
+    return _instance;
+}
+
+- (id)init {
+    
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
+}
+
+- (id)initInternal {
+    
+    self = [super init];
+    self.rankingModel = [[RankingModel alloc] init];
+    return self;
+}
+
 @end

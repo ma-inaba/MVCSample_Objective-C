@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A219B4AC1BFDD93700DB817E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4AB1BFDD93700DB817E /* main.m */; };
-		A219B4AF1BFDD93700DB817E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4AE1BFDD93700DB817E /* AppDelegate.m */; };
-		A219B4B21BFDD93700DB817E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4B11BFDD93700DB817E /* ViewController.m */; };
 		A219B4B51BFDD93700DB817E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A219B4B31BFDD93700DB817E /* Main.storyboard */; };
 		A219B4B71BFDD93700DB817E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A219B4B61BFDD93700DB817E /* Assets.xcassets */; };
 		A219B4BA1BFDD93700DB817E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A219B4B81BFDD93700DB817E /* LaunchScreen.storyboard */; };
 		A219B4C51BFDD93700DB817E /* MVCSample_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4C41BFDD93700DB817E /* MVCSample_Objective_CTests.m */; };
 		A219B4D01BFDD93700DB817E /* MVCSample_Objective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4CF1BFDD93700DB817E /* MVCSample_Objective_CUITests.m */; };
+		A219B4E01BFDDA8800DB817E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4DF1BFDDA8800DB817E /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		A219B4EC1BFDDC3A00DB817E /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4EB1BFDDC3A00DB817E /* RankingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A219B4EF1BFDDC7100DB817E /* RankingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4EE1BFDDC7100DB817E /* RankingTableView.m */; settings = {ASSET_TAGS = (); }; };
+		A219B4F21BFDDC8C00DB817E /* ModelLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4F11BFDDC8C00DB817E /* ModelLocator.m */; settings = {ASSET_TAGS = (); }; };
+		A219B4F51BFDDCA100DB817E /* RankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4F41BFDDCA100DB817E /* RankingModel.m */; settings = {ASSET_TAGS = (); }; };
+		A219B4F81BFDDCB100DB817E /* AppDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4F71BFDDCB100DB817E /* AppDataEntity.m */; settings = {ASSET_TAGS = (); }; };
+		A219B4FB1BFDDCCA00DB817E /* RankingDataAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A219B4FA1BFDDCCA00DB817E /* RankingDataAPIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +42,8 @@
 /* Begin PBXFileReference section */
 		A219B4A71BFDD93700DB817E /* MVCSample_Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVCSample_Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A219B4AB1BFDD93700DB817E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A219B4AD1BFDD93700DB817E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A219B4AE1BFDD93700DB817E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A219B4B01BFDD93700DB817E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A219B4B11BFDD93700DB817E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A219B4B41BFDD93700DB817E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A219B4B61BFDD93700DB817E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A219B4B61BFDD93700DB817E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A219B4B91BFDD93700DB817E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A219B4BB1BFDD93700DB817E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A219B4C01BFDD93700DB817E /* MVCSample_Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVCSample_Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +52,20 @@
 		A219B4CB1BFDD93700DB817E /* MVCSample_Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVCSample_Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A219B4CF1BFDD93700DB817E /* MVCSample_Objective_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCSample_Objective_CUITests.m; sourceTree = "<group>"; };
 		A219B4D11BFDD93700DB817E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A219B4DE1BFDDA8800DB817E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A219B4DF1BFDDA8800DB817E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A219B4EA1BFDDC3A00DB817E /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		A219B4EB1BFDDC3A00DB817E /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
+		A219B4ED1BFDDC7100DB817E /* RankingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableView.h; sourceTree = "<group>"; };
+		A219B4EE1BFDDC7100DB817E /* RankingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableView.m; sourceTree = "<group>"; };
+		A219B4F01BFDDC8C00DB817E /* ModelLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelLocator.h; sourceTree = "<group>"; };
+		A219B4F11BFDDC8C00DB817E /* ModelLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelLocator.m; sourceTree = "<group>"; };
+		A219B4F31BFDDCA100DB817E /* RankingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingModel.h; sourceTree = "<group>"; };
+		A219B4F41BFDDCA100DB817E /* RankingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingModel.m; sourceTree = "<group>"; };
+		A219B4F61BFDDCB100DB817E /* AppDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDataEntity.h; sourceTree = "<group>"; };
+		A219B4F71BFDDCB100DB817E /* AppDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDataEntity.m; sourceTree = "<group>"; };
+		A219B4F91BFDDCCA00DB817E /* RankingDataAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingDataAPIManager.h; sourceTree = "<group>"; };
+		A219B4FA1BFDDCCA00DB817E /* RankingDataAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingDataAPIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +116,14 @@
 		A219B4A91BFDD93700DB817E /* MVCSample_Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				A219B4AD1BFDD93700DB817E /* AppDelegate.h */,
-				A219B4AE1BFDD93700DB817E /* AppDelegate.m */,
-				A219B4B01BFDD93700DB817E /* ViewController.h */,
-				A219B4B11BFDD93700DB817E /* ViewController.m */,
-				A219B4B31BFDD93700DB817E /* Main.storyboard */,
-				A219B4B61BFDD93700DB817E /* Assets.xcassets */,
-				A219B4B81BFDD93700DB817E /* LaunchScreen.storyboard */,
-				A219B4BB1BFDD93700DB817E /* Info.plist */,
+				A219B4DD1BFDDA8800DB817E /* Application */,
+				A219B4E41BFDDB7300DB817E /* Model */,
+				A219B4E61BFDDB7300DB817E /* View */,
+				A219B4E21BFDDB7300DB817E /* Controller */,
+				A219B4E11BFDDB7300DB817E /* API */,
+				A219B4FD1BFDDD0800DB817E /* Utility */,
+				A219B4E71BFDDBCD00DB817E /* Storyboard */,
+				A219B4E51BFDDB7300DB817E /* Resource */,
 				A219B4AA1BFDD93700DB817E /* Supporting Files */,
 			);
 			path = "MVCSample_Objective-C";
@@ -118,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A219B4AB1BFDD93700DB817E /* main.m */,
+				A219B4BB1BFDD93700DB817E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +154,95 @@
 				A219B4D11BFDD93700DB817E /* Info.plist */,
 			);
 			path = "MVCSample_Objective-CUITests";
+			sourceTree = "<group>";
+		};
+		A219B4DD1BFDDA8800DB817E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4DE1BFDDA8800DB817E /* AppDelegate.h */,
+				A219B4DF1BFDDA8800DB817E /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A219B4E11BFDDB7300DB817E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4F91BFDDCCA00DB817E /* RankingDataAPIManager.h */,
+				A219B4FA1BFDDCCA00DB817E /* RankingDataAPIManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A219B4E21BFDDB7300DB817E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4EA1BFDDC3A00DB817E /* RankingViewController.h */,
+				A219B4EB1BFDDC3A00DB817E /* RankingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A219B4E41BFDDB7300DB817E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4F01BFDDC8C00DB817E /* ModelLocator.h */,
+				A219B4F11BFDDC8C00DB817E /* ModelLocator.m */,
+				A219B4E81BFDDC1F00DB817E /* RankingModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A219B4E51BFDDB7300DB817E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4B61BFDD93700DB817E /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A219B4E61BFDDB7300DB817E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4ED1BFDDC7100DB817E /* RankingTableView.h */,
+				A219B4EE1BFDDC7100DB817E /* RankingTableView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A219B4E71BFDDBCD00DB817E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4B31BFDD93700DB817E /* Main.storyboard */,
+				A219B4B81BFDD93700DB817E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A219B4E81BFDDC1F00DB817E /* RankingModel */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4F31BFDDCA100DB817E /* RankingModel.h */,
+				A219B4F41BFDDCA100DB817E /* RankingModel.m */,
+				A219B4E91BFDDC1F00DB817E /* RankingModelEntity */,
+			);
+			path = RankingModel;
+			sourceTree = "<group>";
+		};
+		A219B4E91BFDDC1F00DB817E /* RankingModelEntity */ = {
+			isa = PBXGroup;
+			children = (
+				A219B4F61BFDDCB100DB817E /* AppDataEntity.h */,
+				A219B4F71BFDDCB100DB817E /* AppDataEntity.m */,
+			);
+			path = RankingModelEntity;
+			sourceTree = "<group>";
+		};
+		A219B4FD1BFDDD0800DB817E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A219B4B21BFDD93700DB817E /* ViewController.m in Sources */,
-				A219B4AF1BFDD93700DB817E /* AppDelegate.m in Sources */,
+				A219B4F21BFDDC8C00DB817E /* ModelLocator.m in Sources */,
 				A219B4AC1BFDD93700DB817E /* main.m in Sources */,
+				A219B4E01BFDDA8800DB817E /* AppDelegate.m in Sources */,
+				A219B4FB1BFDDCCA00DB817E /* RankingDataAPIManager.m in Sources */,
+				A219B4EF1BFDDC7100DB817E /* RankingTableView.m in Sources */,
+				A219B4F51BFDDCA100DB817E /* RankingModel.m in Sources */,
+				A219B4F81BFDDCB100DB817E /* AppDataEntity.m in Sources */,
+				A219B4EC1BFDDC3A00DB817E /* RankingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +424,7 @@
 				A219B4B41BFDD93700DB817E /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A219B4B81BFDD93700DB817E /* LaunchScreen.storyboard */ = {
@@ -322,6 +433,7 @@
 				A219B4B91BFDD93700DB817E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

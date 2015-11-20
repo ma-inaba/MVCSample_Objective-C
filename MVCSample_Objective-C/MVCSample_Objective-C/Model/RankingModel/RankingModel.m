@@ -7,33 +7,34 @@
 //
 
 #import "RankingModel.h"
+#import "RankingDataAPIManager.h"
 
 @implementation RankingModel
 
-- (void)receiveRankingData {
-    self.rankingAppDataEntities = [NSMutableArray array];
+- (instancetype)init {
     
-    // ここでapiクラス等つかってデータを取得し、配列にセットする
-    // TODO: 非同期で通信し、データを取ってくる想定。APIManagerを使用する
-    // TODO: 現状はとりあえずの実装
-    
-    NSMutableArray *tempArray = [NSMutableArray array];
-    AppDataEntity *entity = [[AppDataEntity alloc] init];
-    entity.appID = 112233;
-    entity.appTitle = @"パズドラ";
-    [tempArray addObject:entity];
-    
-    AppDataEntity *entity2 = [[AppDataEntity alloc] init];
-    entity2.appID = 665544;
-    entity2.appTitle = @"ツムツム";
-    [tempArray addObject:entity2];
-    
-    AppDataEntity *entity3 = [[AppDataEntity alloc] init];
-    entity3.appID = 334455;
-    entity3.appTitle = @"モンスト";
-    [tempArray addObject:entity3];
+    self = [super init];
+    if (self) {
+        self.rankingAppDataEntities = [NSMutableArray array];
+    }
+    return self;
+}
 
-    self.rankingAppDataEntities = tempArray;
+- (void)receiveRankingData {
+
+    RankingDataAPIManager *apiManager = [[RankingDataAPIManager alloc] init];
+    [apiManager loadAppStoreRankingData:^(NSDictionary *rankingData) {
+       
+        AppDataEntity *entity = [[AppDataEntity alloc] init];
+        entity.appID = [[rankingData objectForKey:@"appID"] intValue];
+        entity.appTitle = [rankingData objectForKey:@"appTitle"];
+        
+        // NSMutableArrayのaddObjectはkvoの監視ができないので手動通知
+        [self willChangeValueForKey:@"rankingAppDataEntities"];
+        [self.rankingAppDataEntities addObject:entity];
+        [self didChangeValueForKey:@"rankingAppDataEntities"];
+        
+    }];
 
 }
 

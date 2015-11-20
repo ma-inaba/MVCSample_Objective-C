@@ -10,15 +10,29 @@
 
 @implementation RankingDataAPIManager
 
-- (void)loadAppStoreRankingData:(void (^)(NSDictionary *rankingData))block {
+- (void)loadAppStoreRankingData:(void (^)(NSArray *rankingData))block {
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // 仮に通信したていで５秒スリープさせる
         sleep(5);
-        NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-        [dictionary setObject:[NSNumber numberWithInt:111111] forKey:@"appID"];
-        [dictionary setObject:@"パズドラ" forKey:@"appTitle"];
-        block(dictionary);
+        NSArray *idArray = [NSArray arrayWithObjects:
+                            [NSNumber numberWithInt:111111],
+                            [NSNumber numberWithInt:222222],
+                            [NSNumber numberWithInt:333333], nil];
+        
+        NSArray *titleArray = [NSArray arrayWithObjects:
+                               @"パズドラ", @"ツムツム", @"モンスト", nil];
+        
+        
+        NSMutableArray *tempArray = [NSMutableArray array];
+        for (int i = 0; i < 3; i++) {
+            NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+            [dictionary setObject:[idArray objectAtIndex:i] forKey:@"appID"];
+            [dictionary setObject:[titleArray objectAtIndex:i] forKey:@"appTitle"];
+            [tempArray addObject:dictionary];
+        }
+        
+        block(tempArray);
     });
 }
 @end

@@ -23,15 +23,17 @@
 - (void)receiveRankingData {
 
     RankingDataAPIManager *apiManager = [[RankingDataAPIManager alloc] init];
-    [apiManager loadAppStoreRankingData:^(NSDictionary *rankingData) {
-       
-        AppDataEntity *entity = [[AppDataEntity alloc] init];
-        entity.appID = [[rankingData objectForKey:@"appID"] intValue];
-        entity.appTitle = [rankingData objectForKey:@"appTitle"];
-        
+    [apiManager loadAppStoreRankingData:^(NSArray *rankingData) {
+
         // NSMutableArrayのaddObjectはkvoの監視ができないので手動通知
         [self willChangeValueForKey:@"rankingAppDataEntities"];
-        [self.rankingAppDataEntities addObject:entity];
+        for (NSDictionary *dict in rankingData) {
+            
+            AppDataEntity *entity = [[AppDataEntity alloc] init];
+            entity.appID = [[dict objectForKey:@"appID"] intValue];
+            entity.appTitle = [dict objectForKey:@"appTitle"];
+            [self.rankingAppDataEntities addObject:entity];
+        }
         [self didChangeValueForKey:@"rankingAppDataEntities"];
         
     }];

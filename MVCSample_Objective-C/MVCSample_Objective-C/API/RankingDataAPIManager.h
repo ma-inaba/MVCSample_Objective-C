@@ -10,6 +10,6 @@
 
 @interface RankingDataAPIManager : NSObject
 
-- (void)loadAppStoreRankingData:(void (^)(NSDictionary *rankingData))block;
+- (void)loadAppStoreRankingData:(void (^)(NSArray *rankingData))block;
 
 @end

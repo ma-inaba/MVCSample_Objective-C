@@ -45,6 +45,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     if ([self.rankingTableViewDelegate respondsToSelector:@selector(didSelectRowWithAppDataEntity:)]) {
         AppDataEntity *entity = [[ModelLocator sharedInstance].rankingModel.rankingAppDataEntities objectAtIndex:indexPath.row];
         [self.rankingTableViewDelegate didSelectRowWithAppDataEntity:entity];

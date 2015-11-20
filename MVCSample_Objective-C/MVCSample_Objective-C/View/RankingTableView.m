@@ -16,7 +16,7 @@
     self.dataSource = self;
     
     // KVO監視を始める
-    [[ModelLocator sharedInstance].rankingModel addObserver:self forKeyPath:@"rankingAppDataEntities" options:NSKeyValueObservingOptionInitial context:nil];
+    [[ModelLocator sharedInstance].rankingModel addObserver:self forKeyPath:@"rankingAppDataEntities" options:0 context:nil];
     [self refreshData];
 }
 
@@ -29,6 +29,7 @@
 // データを取得する
 - (void)refreshData {
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [[ModelLocator sharedInstance].rankingModel receiveRankingData];
 }
 
@@ -37,6 +38,7 @@
     if ([keyPath isEqualToString:@"rankingAppDataEntities"]) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self reloadData];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         });
     }
 }

@@ -25,11 +25,36 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    
+    // KVO監視を始める
+    [[ModelLocator sharedInstance].rankingModel addObserver:self forKeyPath:@"rankingAppDataEntities" options:0 context:nil];
+    [self refreshData];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
     
-    [super viewDidAppear:animated];
+    [super viewWillDisappear:animated];
+    
+    // KVO監視を解除する
+    [[ModelLocator sharedInstance].rankingModel removeObserver:self forKeyPath:@"rankingAppDataEntities"];
+}
+
+// データを取得する
+- (void)refreshData {
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [[ModelLocator sharedInstance].rankingModel receiveRankingData];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    
+    if ([keyPath isEqualToString:@"rankingAppDataEntities"]) {
+        __weak __typeof__(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.rankingTableView reloadData];
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        });
+    }
 }
 
 - (void)didSelectRowWithAppDataEntity:(AppDataEntity *)appDataEntity {

@@ -15,5 +15,7 @@
 
 // データを取得してentityにセットする
 - (void)receiveRankingData;
+// 保持していたランキングデータを全て削除する
+- (void)removeAllRankingData;
 
 @end

@@ -608,6 +608,7 @@
 				A219B4D61BFDD93700DB817E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A219B4D71BFDD93700DB817E /* Build configuration list for PBXNativeTarget "MVCSample_Objective-CTests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +617,7 @@
 				A219B4D91BFDD93700DB817E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A219B4DA1BFDD93700DB817E /* Build configuration list for PBXNativeTarget "MVCSample_Objective-CUITests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +626,7 @@
 				A219B4DC1BFDD93700DB817E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

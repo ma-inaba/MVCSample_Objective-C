@@ -38,7 +38,11 @@
         [weakSelf didChangeValueForKey:@"rankingAppDataEntities"];
         
     }];
+}
 
+- (void)removeAllRankingData {
+    
+    [self.rankingAppDataEntities removeAllObjects];
 }
 
 @end

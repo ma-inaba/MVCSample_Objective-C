@@ -42,6 +42,9 @@
 // データを取得する
 - (void)refreshData {
     
+    if ([[ModelLocator sharedInstance].rankingModel.rankingAppDataEntities count] != 0) {
+        [[ModelLocator sharedInstance].rankingModel removeAllRankingData];
+    }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [[ModelLocator sharedInstance].rankingModel receiveRankingData];
 }
